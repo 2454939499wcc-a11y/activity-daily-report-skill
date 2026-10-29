@@ -1,0 +1,38 @@
+{
+  "head": "【{displayName} 日报】{date}",
+  "sections": [
+    {
+      "title": "◆ 当日活动",
+      "lines": [
+        "PV {activity_pv}｜UV {activity_uv}",
+        "参与 UV {active_uv}｜分享 UV {share_uv}",
+        "播放 UV {play_uv}｜红心 UV {like_uv}"
+      ]
+    },
+    {
+      "title": "◆ 活动累计（{total_start} ~ {total_end}）",
+      "lines": [
+        "PV {total_pv}｜UV {total_uv}{total_note}"
+      ]
+    },
+    {
+      "title": "◆ 页面漏斗",
+      "lines": [
+        "{step_lines}"
+      ]
+    },
+    {
+      "title": "◆ 自定义数据",
+      "lines": [
+        "{custom_lines}"
+      ],
+      "optional": true
+    },
+    {
+      "title": "",
+      "lines": [
+        "统计口径：{scope}"
+      ]
+    }
+  ]
+}

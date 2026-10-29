@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Activity Daily Report Card",
+  "description": "通用活动日报名片。一个活动一份，新活动只填名片。",
+  "type": "object",
+  "required": ["name", "displayName", "bizCode", "lifecycle", "broadcast", "pages"],
+  "properties": {
+    "name": {"type": "string"},
+    "displayName": {"type": "string"},
+    "bizCode": {"type": "string"},
+    "status": {"type": "string", "enum": ["draft", "active"], "default": "draft"},
+    "notes": {"type": "string"},
+    "lifecycle": {
+      "type": "object",
+      "properties": {
+        "start": {"type": "string", "description": "YYYY-MM-DD HH:MM:SS"},
+        "end": {"type": "string", "description": "YYYY-MM-DD HH:MM:SS 或 permanent"}
+      }
+    },
+    "platform": {
+      "type": "object",
+      "properties": {
+        "appNames": {"type": "array", "items": {"type": "string"}},
+        "env": {"type": "string", "default": "online"}
+      }
+    },
+    "broadcast": {
+      "type": "object",
+      "properties": {
+        "groupId": {"type": "string"},
+        "daily": {
+          "type": "object",
+          "properties": {
+            "enabled": {"type": "boolean", "default": true},
+            "cron": {"type": "string", "default": "0 10 * * *"},
+            "template": {"type": "string", "enum": ["daily_generic"], "default": "daily_generic"},
+            "includeTotal": {"type": "boolean", "default": true}
+          }
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "provider": {"type": "string", "enum": ["das"], "default": "das"},
+        "das": {
+          "type": "object",
+          "properties": {
+            "table": {"type": "string", "default": "music_new_dm.ads_log_h5_activity_tag_di"},
+            "activity_id": {"type": "string"},
+            "activity_name_keyword": {"type": "string"},
+            "is_dawn": {"type": "integer", "enum": [0, 1], "default": 0}
+          }
+        }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "spm_no"],
+        "properties": {
+          "name": {"type": "string"},
+          "spm_no": {"type": "string"},
+          "pt_action": {"type": "string", "description": "留空自动推断：page_* -> _pv, mod_* -> _ev, btn_* -> _ec"},
+          "step": {"type": "integer"}
+        }
+      }
+    },
+    "customMetrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "label"],
+        "properties": {
+          "key": {"type": "string", "description": "对应 --data 里的字段名"},
+          "label": {"type": "string"},
+          "unit": {"type": "string"}
+        }
+      }
+    }
+  }
+}

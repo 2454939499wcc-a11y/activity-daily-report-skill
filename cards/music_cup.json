@@ -1,0 +1,107 @@
+{
+  "name": "music_cup",
+  "displayName": "Music Cup",
+  "bizCode": "music_cup",
+  "status": "active",
+  "notes": "示例名片：groupId/DDB host 已替换为占位符",
+  "lifecycle": {
+    "start": "2026-09-22 00:00:00",
+    "end": "permanent"
+  },
+  "platform": {
+    "appNames": [
+      "music-content-activity-home"
+    ],
+    "env": "online"
+  },
+  "broadcast": {
+    "groupId": "<popo_group_tid>",
+    "daily": {
+      "enabled": true,
+      "cron": "0 10 * * *",
+      "template": "daily_generic",
+      "includeTotal": true
+    }
+  },
+  "metrics": {
+    "provider": "das",
+    "das": {
+      "table": "music_new_dm.ads_log_h5_activity_tag_di",
+      "activity_id": "music-cup-2026",
+      "activity_name_keyword": "music-cup-2026",
+      "is_dawn": 1
+    }
+  },
+  "pages": [
+    {
+      "name": "加载页",
+      "spm_no": "page_web_music_cup_loading|page_h5_biz",
+      "pt_action": "_pv",
+      "step": 1
+    },
+    {
+      "name": "首页",
+      "spm_no": "page_web_music_cup_home|page_h5_biz",
+      "pt_action": "_pv",
+      "step": 2
+    },
+    {
+      "name": "小组赛",
+      "spm_no": "page_web_music_cup_group|page_h5_biz",
+      "pt_action": "_pv",
+      "step": 3
+    },
+    {
+      "name": "遗珠过场",
+      "spm_no": "page_web_music_cup_revive_entry|page_h5_biz",
+      "pt_action": "_pv",
+      "step": 4
+    },
+    {
+      "name": "遗珠复活",
+      "spm_no": "page_web_music_cup_revive|page_h5_biz",
+      "pt_action": "_pv",
+      "step": 5
+    },
+    {
+      "name": "8进4",
+      "spm_no": "page_web_music_cup_qf|page_h5_biz",
+      "pt_action": "_pv",
+      "step": 6
+    },
+    {
+      "name": "4进2",
+      "spm_no": "page_web_music_cup_sf|page_h5_biz",
+      "pt_action": "_pv",
+      "step": 7
+    },
+    {
+      "name": "决赛",
+      "spm_no": "page_web_music_cup_final|page_h5_biz",
+      "pt_action": "_pv",
+      "step": 8
+    },
+    {
+      "name": "结果页",
+      "spm_no": "page_web_music_cup_result|page_h5_biz",
+      "pt_action": "_pv",
+      "step": 9
+    }
+  ],
+  "customMetrics": [
+    {
+      "key": "fallback_uv",
+      "label": "命中兜底歌曲用户",
+      "unit": "人",
+      "source": {
+        "provider": "owl_ddb",
+        "host": "<ddb_host>",
+        "port": 3306,
+        "dbType": "ddb",
+        "schema": "content_activity",
+        "field": "c",
+        "sql": "SELECT COUNT(*) AS c FROM music_content_activity_music_cup_record WHERE bizCode = 'music_cup' AND status = 'NORMAL' AND matchData LIKE '%\"songSource\":\"FALLBACK\"%' AND JSON_UNQUOTE(JSON_EXTRACT(matchData, '$.songSource')) = 'FALLBACK'"
+      }
+    }
+  ]
+}

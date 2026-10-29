@@ -1,0 +1,42 @@
+{
+  "name": "<activity_name>",
+  "displayName": "<活动中文名>",
+  "bizCode": "<biz_code>",
+  "status": "draft",
+  "notes": "新活动模板。填完后跑 validate_card.py。",
+  "lifecycle": {
+    "start": "",
+    "end": ""
+  },
+  "platform": {
+    "appNames": ["music-content-activity-home"],
+    "env": "online"
+  },
+  "broadcast": {
+    "groupId": "",
+    "daily": {
+      "enabled": true,
+      "cron": "0 10 * * *",
+      "template": "daily_generic",
+      "includeTotal": true
+    }
+  },
+  "metrics": {
+    "provider": "das",
+    "das": {
+      "table": "music_new_dm.ads_log_h5_activity_tag_di",
+      "activity_id": "",
+      "activity_name_keyword": "<活动名关键词>",
+      "is_dawn": 0
+    }
+  },
+  "pages": [
+    {
+      "name": "<页面名>",
+      "spm_no": "<spm_no>",
+      "pt_action": "",
+      "step": 1
+    }
+  ],
+  "customMetrics": []
+}
