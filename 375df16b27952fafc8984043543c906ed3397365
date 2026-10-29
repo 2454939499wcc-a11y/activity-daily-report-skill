@@ -1,0 +1,173 @@
+references/cron.md
+  0afe4e8164a33619 1-58
+sql/spm_pv_uv_range.sql
+  0afe4e8164a33619 1-8
+templates/daily_generic.json
+  0afe4e8164a33619 1-38
+schema/activity.schema.json
+  0afe4e8164a33619 1-84
+sql/activity_tag_find.sql
+  0afe4e8164a33619 1-9
+scripts/daily_report.py
+  0afe4e8164a33619 1-412
+scripts/common.py
+  0afe4e8164a33619 1-95
+sql/spm_pv_uv_trend.sql
+  0afe4e8164a33619 1-11
+SKILL.md
+  0afe4e8164a33619 1-306
+sql/activity_tag_daily.sql
+  0afe4e8164a33619 1-17
+scripts/das_query.py
+  0afe4e8164a33619 1-64
+cards/_template.json
+  0afe4e8164a33619 1-42
+scripts/query_activity.py
+  0afe4e8164a33619 1-153
+sql/activity_tag_range_pv.sql
+  0afe4e8164a33619 1-7
+cards/music_cup.json
+  0afe4e8164a33619 1-107
+.gitignore
+  0afe4e8164a33619 1-6
+scripts/probe_spm.py
+  0afe4e8164a33619 1-92
+scripts/run_daily.py
+  0afe4e8164a33619 1-152
+scripts/send_rich_text.py
+  0afe4e8164a33619 1-89
+scripts/validate_card.py
+  0afe4e8164a33619 1-135
+sql/activity_tag_trend.sql
+  0afe4e8164a33619 1-14
+sql/spm_pv_uv.sql
+  0afe4e8164a33619 1-8
+references/card-guide.md
+  0afe4e8164a33619 1-60
+scripts/commit_daily_state.py
+  0afe4e8164a33619 1-27
+scripts/custom_data.py
+  0afe4e8164a33619 1-80
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8-ntes.9",
+  "base_commit_sha": "375df16b27952fafc8984043543c906ed3397365",
+  "prompts": {
+    "0afe4e8164a33619": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "890630ec-280a-47dd-9cca-8fd0713bcc12",
+        "model": "deepseek-flash"
+      },
+      "human_author": "wangchencheng",
+      "messages": [],
+      "total_additions": 2074,
+      "total_deletions": 0,
+      "accepted_lines": 2074,
+      "overriden_lines": 0,
+      "per_file_stats": {
+        "scripts/validate_card.py": {
+          "additions": 135,
+          "accepted_lines": 135
+        },
+        "references/cron.md": {
+          "additions": 58,
+          "accepted_lines": 58
+        },
+        "templates/daily_generic.json": {
+          "additions": 38,
+          "accepted_lines": 38
+        },
+        "sql/spm_pv_uv_range.sql": {
+          "additions": 8,
+          "accepted_lines": 8
+        },
+        "scripts/common.py": {
+          "additions": 95,
+          "accepted_lines": 95
+        },
+        "scripts/commit_daily_state.py": {
+          "additions": 27,
+          "accepted_lines": 27
+        },
+        "SKILL.md": {
+          "additions": 306,
+          "accepted_lines": 306
+        },
+        "references/card-guide.md": {
+          "additions": 60,
+          "accepted_lines": 60
+        },
+        "scripts/das_query.py": {
+          "additions": 64,
+          "accepted_lines": 64
+        },
+        "scripts/query_activity.py": {
+          "additions": 153,
+          "accepted_lines": 153
+        },
+        "cards/music_cup.json": {
+          "additions": 107,
+          "accepted_lines": 107
+        },
+        "sql/activity_tag_range_pv.sql": {
+          "additions": 7,
+          "accepted_lines": 7
+        },
+        "scripts/send_rich_text.py": {
+          "additions": 89,
+          "accepted_lines": 89
+        },
+        "scripts/daily_report.py": {
+          "additions": 412,
+          "accepted_lines": 412
+        },
+        "scripts/probe_spm.py": {
+          "additions": 92,
+          "accepted_lines": 92
+        },
+        "scripts/custom_data.py": {
+          "additions": 80,
+          "accepted_lines": 80
+        },
+        "scripts/run_daily.py": {
+          "additions": 152,
+          "accepted_lines": 152
+        },
+        "sql/activity_tag_trend.sql": {
+          "additions": 14,
+          "accepted_lines": 14
+        },
+        ".gitignore": {
+          "additions": 6,
+          "accepted_lines": 6
+        },
+        "sql/spm_pv_uv.sql": {
+          "additions": 8,
+          "accepted_lines": 8
+        },
+        "schema/activity.schema.json": {
+          "additions": 84,
+          "accepted_lines": 84
+        },
+        "cards/_template.json": {
+          "additions": 42,
+          "accepted_lines": 42
+        },
+        "sql/activity_tag_find.sql": {
+          "additions": 9,
+          "accepted_lines": 9
+        },
+        "sql/spm_pv_uv_trend.sql": {
+          "additions": 11,
+          "accepted_lines": 11
+        },
+        "sql/activity_tag_daily.sql": {
+          "additions": 17,
+          "accepted_lines": 17
+        }
+      }
+    }
+  }
+}
